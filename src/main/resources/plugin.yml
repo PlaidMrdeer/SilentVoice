@@ -1,0 +1,36 @@
+name: SilentVoice
+version: '${project.version}'
+main: com.plaidmrdeer.silentvoice.SilentVoice
+api-version: 1.13
+author: PlaidMrdeer
+description: SilentVoice Plugin
+
+commands:
+  silentvoicereload:
+    usage: /<command>
+    description: Reload command
+    aliases:
+      - svreload
+
+  silentvoice:
+    usage: /<command>
+    description: message menu
+    aliases:
+      - sv
+
+permissions:
+  SilentVoice.command.silentvoicereload:
+    default: op
+    description: Reload command permissions
+
+  SilentVoice.command.silentvoice:
+    default: true
+    description: message menu permissions
+
+  SilentVoice.command.silentvoice.view:
+    default: true
+    description: view message permissions
+
+  SilentVoice.command.silentvoice.write:
+    default: true
+    description: write message permissions
