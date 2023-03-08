@@ -2,6 +2,14 @@
 ## Plugin introduction:
 * This plugin can leave anonymous messages to others and tell them what you think.A small plugin.
 
+# Note: Currently, the storage mode only supports Sqlite and MySQL.
+### The plugin has three built-in languages: Chinese, English and German,If you don't have the language you want, you can also customize the language
+1. Copy one from the built-in language file
+2. Change its file name to the name you want
+3. Change file content
+4. Go to "config.yml" and change the "language" to your language file
+language: "english"
+
 ## Below are some pictures of the plugin:
 <div>
   <img src="https://github.com/plaidmrdeer/SilentVoice/blob/main/img/1.png" width="50%">
