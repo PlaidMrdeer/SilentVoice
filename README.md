@@ -1,4 +1,4 @@
-# SilentVoice# SilentVoice
+# SilentVoice
 ## Plugin introduction:
 * This plugin can leave anonymous messages to others and tell them what you think.A small plugin.
 
