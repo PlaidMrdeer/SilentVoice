@@ -8,7 +8,6 @@
 2. Change its file name to the name you want
 3. Change file content
 4. Go to "config.yml" and change the "language" to your language file
-language: "english"
 
 ## Below are some pictures of the plugin:
 <div>
