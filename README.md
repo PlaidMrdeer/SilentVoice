@@ -74,4 +74,4 @@ sql:
     * default: true
     * description: write message permissions
 
-# Finally, thank you for using my plugin. If you find any bugs or functions you need during use, please contact me in time
+# Finally, thank you for using my plug-in. If you find any errors or required functions during use, please contact me in time
