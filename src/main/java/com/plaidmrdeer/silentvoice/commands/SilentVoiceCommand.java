@@ -42,13 +42,8 @@ public class SilentVoiceCommand implements CommandExecutor {
             return true;
         }
 
-        if (args.length > subLength) {
-            instance.sendMessage (sender, commandErrorPath);
-            return true;
-        }
-
         try {
-            if (args.length == subLength) {
+            if (args.length > subLength) {
                 if (!sender.hasPermission(silentVoiceWritePermissions)) {
                     instance.sendMessage (sender, noPermissionPath);
                     return true;
@@ -61,12 +56,17 @@ public class SilentVoiceCommand implements CommandExecutor {
                     @Override
                     public void run() {
                         try {
+                            StringBuilder sb = new StringBuilder();
+                            for (int i = 1; i <= args.length - 1; i++) {
+                                sb.append(args[i] + " ");
+                            }
+                            String message = sb.toString().trim();
                             if ("sqlite".equals (instance.config.getString("sql.type"))) {
                                 instance.getSqlite().createTable(args[0]);
-                                instance.getSqlite().insert(args[0], args[1], formattedDateTime);
+                                instance.getSqlite().insert(args[0], message, formattedDateTime);
                             } else {
                                 instance.getMySql().createTable(args[0]);
-                                instance.getMySql().insert(args[0], args[1], formattedDateTime);
+                                instance.getMySql().insert(args[0], message, formattedDateTime);
                             }
                         } catch (Exception e) {
                             throw new RuntimeException(e);
