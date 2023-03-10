@@ -126,6 +126,7 @@ public final class SilentVoice extends JavaPlugin {
 
     @Override
     public void onEnable() {
+
         saveDefaultConfig();
 
         config = getConfig();

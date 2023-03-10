@@ -41,9 +41,9 @@ public class MessageGui {
                 Map<Integer, List<String>> message;
                 try {
                     if ("sqlite".equals (instance.config.getString("sql.type"))) {
-                        message = instance.getSqlite().query(name);
+                        message = instance.getSqlite().queryList(name);
                     } else {
-                        message = instance.getMySql().query(name);
+                        message = instance.getMySql().queryList(name);
                     }
                 } catch (Exception e) {
                     throw new RuntimeException(e);

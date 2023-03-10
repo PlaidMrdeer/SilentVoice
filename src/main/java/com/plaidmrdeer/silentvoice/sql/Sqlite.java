@@ -44,7 +44,7 @@ public class Sqlite {
         pstmt.close();
     }
 
-    public Map<Integer, List<String>> query(String tableName) throws Exception {
+    public Map<Integer, List<String>> queryList(String tableName) throws Exception {
         Map<Integer, List<String>> messageList = new HashMap<>();
         stmt = c.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name='" + tableName + "'" + ";");

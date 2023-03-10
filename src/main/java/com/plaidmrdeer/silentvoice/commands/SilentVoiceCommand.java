@@ -25,11 +25,10 @@ public class SilentVoiceCommand implements CommandExecutor {
                              @NotNull String label,
                              @NotNull String[] args) {
 
-        String silentVoicePermissions = "SilentVoice.command.silentvoicereload";
+        String silentVoicePermissions = "SilentVoice.command.silentvoice";
         String silentVoiceViewPermissions = "SilentVoice.command.silentvoice.view";
         String silentVoiceWritePermissions = "SilentVoice.command.silentvoice.write";
         String noPermissionPath = "no_permissions";
-        String commandErrorPath = "command_error";
         int subLength = 2;
 
         if (!sender.hasPermission(silentVoicePermissions)) {
@@ -43,7 +42,7 @@ public class SilentVoiceCommand implements CommandExecutor {
         }
 
         try {
-            if (args.length > subLength) {
+            if (args.length >= subLength) {
                 if (!sender.hasPermission(silentVoiceWritePermissions)) {
                     instance.sendMessage (sender, noPermissionPath);
                     return true;
@@ -58,7 +57,7 @@ public class SilentVoiceCommand implements CommandExecutor {
                         try {
                             StringBuilder sb = new StringBuilder();
                             for (int i = 1; i <= args.length - 1; i++) {
-                                sb.append(args[i] + " ");
+                                sb.append(args[i]).append(" ");
                             }
                             String message = sb.toString().trim();
                             if ("sqlite".equals (instance.config.getString("sql.type"))) {

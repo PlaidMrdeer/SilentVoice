@@ -43,7 +43,7 @@ public class MySql {
         pstmt.close();
     }
 
-    public Map<Integer, List<String>> query(String tableName) throws Exception {
+    public Map<Integer, List<String>> queryList(String tableName) throws Exception {
         Map<Integer, List<String>> messageList = new HashMap<>();
         stmt = c.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT 1 FROM `" + tableName + "` LIMIT 1");
