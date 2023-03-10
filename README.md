@@ -78,7 +78,7 @@ sql:
   
  <details>
 <summary>Reform log</summary>
-   * v1.0.1 2023-3-10
-    * Fixed the "/sv" directive that can only be used with administrator privileges
-    * Fixed a bug where strings could only be written with spaces when leaving a message
+v1.0.1 2023-3-10
+    Fixed the "/sv" directive that can only be used with administrator privileges
+    Fixed a bug where strings could only be written with spaces when leaving a message
 </details>
