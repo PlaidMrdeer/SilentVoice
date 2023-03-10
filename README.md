@@ -77,8 +77,12 @@ sql:
 # Finally, thank you for using my plug-in. If you find any errors or required functions during use, please contact me in time
   
  <details>
-     <summary>Reform log</summary>
-     1. list
-          * With some
-          * Sub bullets
+   <summary>Reform log</summary>
+   <pre>
+   <code>
+      v1.0.1 2023-3-10
+         Fixed the "/sv" directive that can only be used with administrator privileges
+         Fixed a bug where strings could only be written with spaces when leaving a message
+   </code>
+   </pre>
 </details>
